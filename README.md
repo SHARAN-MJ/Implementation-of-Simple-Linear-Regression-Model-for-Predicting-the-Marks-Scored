@@ -74,23 +74,32 @@ print("RMSE = ",rmse)
 
 ## Output:
 ### Head:
-![image](head.png)
+![head](https://github.com/SHARAN-MJ/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/119560305/496d691e-9587-4d02-a0a2-17f4666447ed)
+
 ### Tail:
-![image](tail.png)
+![tail](https://github.com/SHARAN-MJ/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/119560305/5f672404-85d2-4eb0-acde-299cefbf3bcd)
+
 ### Array value of X:
-![image](arrayx.png)
+![arrayx](https://github.com/SHARAN-MJ/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/119560305/18cb0196-5e7b-4109-92e9-fd215f7d55d0)
+
 ### Array value of Y:
-![image](arrayy.png)
+![arrayy](https://github.com/SHARAN-MJ/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/119560305/412932df-4367-418c-8628-37f7193a43f2)
+
 ### Values of Y prediction:
-![image](ypredict.png)
+![ypredict](https://github.com/SHARAN-MJ/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/119560305/8b70c6db-b5c0-490d-b63c-7b865d0aaac7)
+
 ### Array values of Y test:
-![image](ytest.png)
+![ytest](https://github.com/SHARAN-MJ/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/119560305/ee4853de-f5df-448c-8434-d6ee6d3b368d)
+
 ### Training Set Graph:
-![image](pic1.png)
+![pic1](https://github.com/SHARAN-MJ/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/119560305/a694c1b4-1bcf-40d9-8c8f-d55456f914ef)
+
 ### Test Set Graph:
-![image](pic2.png)
+![pic2](https://github.com/SHARAN-MJ/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/119560305/fa334545-37af-4f7f-a1a1-b5b41ffcbcbc)
+
 ### Values of MSE, MAE and RMSE:
-![image](value.png)
+![value](https://github.com/SHARAN-MJ/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/119560305/ec8c29bd-44af-4636-b27f-6daaff59db9e)
+
 
 ## Result:
 Thus the program to implement the simple linear regression model for predicting the marks scored is written and verified using python programming.
