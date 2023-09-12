@@ -16,7 +16,7 @@ To write a program to predict the marks scored by a student using the simple lin
 ## Program:
 ```
 Program to implement the simple linear regression model for predicting the marks scored.
-Developed by: SHARAN MJ
+Developed by:  SHARAN MJ
 RegisterNumber: 212222240097
 ```
 ``` python
@@ -47,15 +47,15 @@ y_pred
 
 y_test
 
-plt.scatter(x_train,y_train,color="orangered",s=60)
-plt.plot(x_train,regressor.predict(x_train),color="darkviolet",linewidth=4)
+plt.scatter(x_train,y_train,color="blue",s=60)
+plt.plot(x_train,regressor.predict(x_train),color="yellow",linewidth=4)
 plt.title("hours vs scores(training set)",fontsize=24)
 plt.xlabel("Hours",fontsize=18)
 plt.ylabel("scores",fontsize=18)
 plt.show()
 
-plt.scatter(x_test,y_test,color="seagreen",s=60)
-plt.plot(x_test,regressor.predict(x_test),color="cyan",linewidth=4)
+plt.scatter(x_test,y_test,color="purple",s=60)
+plt.plot(x_test,regressor.predict(x_test),color="yellow",linewidth=4)
 plt.title("hours vs scores(training set)",fontsize=24)
 plt.xlabel("Hours",fontsize=18)
 plt.ylabel("scores",fontsize=18)
@@ -74,24 +74,23 @@ print("RMSE = ",rmse)
 
 ## Output:
 ### Head:
-![image](https://github.com/MukeshVelmurugan/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/118707363/18f3af86-9ae2-4494-bb61-636b83a7bcd5)
+![image](head.png)
 ### Tail:
-![image](https://github.com/MukeshVelmurugan/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/118707363/0a120341-9b3f-4ee2-8740-1ea5cdc71610)
+![image](tail.png)
 ### Array value of X:
-![image](https://github.com/MukeshVelmurugan/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/118707363/e296242a-26a5-4ba3-9736-86bc8fe4e85c)
+![image](arrayx.png)
 ### Array value of Y:
-![image](https://github.com/MukeshVelmurugan/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/118707363/c25d4900-5e51-4bf7-8db7-1ec80106ab55)
+![image](arrayy.png)
 ### Values of Y prediction:
-![image](https://github.com/MukeshVelmurugan/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/118707363/611f79c2-9b85-47f4-9a9f-6fbe4dc4e7ee)
+![image](ypredict.png)
 ### Array values of Y test:
-![image](https://github.com/MukeshVelmurugan/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/118707363/df0a81e5-6894-4e45-9037-6dce6cb3a7d7)
+![image](ytest.png)
 ### Training Set Graph:
-![image](https://github.com/MukeshVelmurugan/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/118707363/42c59aa0-503e-4dc8-b41a-315bdd9680c1)
+![image](pic1.png)
 ### Test Set Graph:
-![image](https://github.com/MukeshVelmurugan/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/118707363/8e868618-b584-4339-a91e-3b07e48301ba)
+![image](pic2.png)
 ### Values of MSE, MAE and RMSE:
-![image](https://github.com/MukeshVelmurugan/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/118707363/08d3470e-d71f-43e9-971f-e4871b589271)
-
+![image](value.png)
 
 ## Result:
 Thus the program to implement the simple linear regression model for predicting the marks scored is written and verified using python programming.
