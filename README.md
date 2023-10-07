@@ -8,33 +8,41 @@ To write a program to predict the marks scored by a student using the simple lin
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
 ## Algorithm
-1. Import Libraries: Import essential libraries for data manipulation, numerical operations, plotting, and regression analysis.
-2. Load and Explore Data: Load a CSV dataset using pandas, then display initial and final rows to quickly explore the data's structure.
-3. Prepare and Split Data: Divide the data into predictors (x) and target (y). Use train_test_split to create training and testing subsets for model building and evaluation.
-4. Train Linear Regression Model: Initialize and train a Linear Regression model using the training data.
-5. Visualize and Evaluate: Create scatter plots to visualize data and regression lines for training and testing. Calculate Mean Squared Error (MSE), Mean Absolute Error (MAE), and Root Mean Squared Error (RMSE) to quantify model performance.
+1. Import pandas,numpy,and sklearn.
+2. Calculate the values for the training data set.
+3. Calculate the values for the test data set.
+4. Plot the graph for both the data sets and calculate for MAE,MSE and RMSE.
+
 ## Program:
 ```
+
 Program to implement the simple linear regression model for predicting the marks scored.
-Developed by:  SHARAN MJ
-RegisterNumber: 212222240097
+Developed by: Mukil kumar V
+RegisterNumber:  212222230087
+
 ```
-``` python
+```
+1)
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.metrics import mean_absolute_error, mean_squared_error
-
-df = pd.read_csv("student_scores.csv") 
+from sklearn.metrics import mean_absolute_error,mean_squared_error
+df=pd.read_csv('/content/student_scores.csv')
 df.head()
-df.tail()
 
-x=df.iloc[:,:-1].values
+2)
+ df.tail()
+
+3)
+ x=df.iloc[:,:-1].values
 x
 
-y=df.iloc[:,1].values
+4)
+ y=df.iloc[:,1].values
 y
 
+5)
+#splitting train and tst data
 from sklearn.model_selection import train_test_split
 x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=1/3,random_state=0)
 
@@ -42,63 +50,71 @@ from sklearn.linear_model import LinearRegression
 regressor=LinearRegression()
 regressor.fit(x_train,y_train)
 y_pred=regressor.predict(x_test)
-
 y_pred
 
-y_test
+6)
+ y_test
 
-plt.scatter(x_train,y_train,color="blue",s=60)
-plt.plot(x_train,regressor.predict(x_train),color="yellow",linewidth=4)
-plt.title("hours vs scores(training set)",fontsize=24)
-plt.xlabel("Hours",fontsize=18)
-plt.ylabel("scores",fontsize=18)
+7)
+ #graph plot for training data
+plt.scatter(x_train,y_train,color='black')
+plt.plot(x_train,regressor.predict(x_train),color='purple')
+plt.title("Hours vs Scores(Training Set)")
+plt.xlabel("Hours")
+plt.ylabel("Scores")
 plt.show()
 
-plt.scatter(x_test,y_test,color="purple",s=60)
-plt.plot(x_test,regressor.predict(x_test),color="yellow",linewidth=4)
-plt.title("hours vs scores(training set)",fontsize=24)
-plt.xlabel("Hours",fontsize=18)
-plt.ylabel("scores",fontsize=18)
+8)
+plt.scatter(x_test,y_test,color='aqua')
+plt.plot(x_test,regressor.predict(x_test),color='black')
+plt.title("Hours vs Scores(Test Set)")
+plt.xlabel("Hours")
+plt.ylabel("Scores")
 plt.show()
 
-
-mse=mean_squared_error(_test,y_pred)
+9)
+ mse=mean_squared_error(y_test,y_pred)
 print('MSE = ',mse)
-
 mae=mean_absolute_error(y_test,y_pred)
 print('MAE = ',mae)
-
 rmse=np.sqrt(mse)
 print("RMSE = ",rmse)
+
 ```
 
 ## Output:
-### Head:
-![head](https://github.com/SHARAN-MJ/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/119560305/496d691e-9587-4d02-a0a2-17f4666447ed)
 
-### Tail:
-![tail](https://github.com/SHARAN-MJ/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/119560305/5f672404-85d2-4eb0-acde-299cefbf3bcd)
+## df.head()
+![ML1](https://github.com/Roselinjovita/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/119104296/04b13a44-0138-4b7a-a0d8-fc7729167297)
 
-### Array value of X:
-![arrayx](https://github.com/SHARAN-MJ/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/119560305/18cb0196-5e7b-4109-92e9-fd215f7d55d0)
+## df.tail()
+![ML2](https://github.com/Roselinjovita/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/119104296/d9863f02-c6da-4624-a95e-4bf7e38e2b22)
 
-### Array value of Y:
-![arrayy](https://github.com/SHARAN-MJ/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/119560305/412932df-4367-418c-8628-37f7193a43f2)
+## ARRAY VALUES OF X
+![ML3](https://github.com/Roselinjovita/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/119104296/e8453028-2ec8-460b-bb23-7cea4b693ce9)
 
-### Values of Y prediction:
-![ypredict](https://github.com/SHARAN-MJ/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/119560305/8b70c6db-b5c0-490d-b63c-7b865d0aaac7)
+## ARRAY VALUES FOR Y
+![ML4](https://github.com/Roselinjovita/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/119104296/7e4185af-70ea-4ee1-a67b-0ac4160565b3)
 
-### Array values of Y test:
-![ytest](https://github.com/SHARAN-MJ/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/119560305/ee4853de-f5df-448c-8434-d6ee6d3b368d)
+## VALUES OF Y PREDICTION
+![ML5](https://github.com/Roselinjovita/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/119104296/8915c8cd-cd8f-4b7c-8a37-a15d886905d7)
 
-### Training Set Graph:
-![pic1](https://github.com/SHARAN-MJ/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/119560305/a694c1b4-1bcf-40d9-8c8f-d55456f914ef)
+## ARRAY VALUES OF Y TEST
+![ML6](https://github.com/Roselinjovita/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/119104296/8c75828d-cdce-4359-8a4a-0be8390ecd5c)
 
-### Test Set Graph:
-![pic2](https://github.com/SHARAN-MJ/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/119560305/fa334545-37af-4f7f-a1a1-b5b41ffcbcbc)
+## TRAINING SET GRAPH
+![ML7](https://github.com/Roselinjovita/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/119104296/15fcb028-b206-40b3-ad60-cf326af0ff3e)
 
-### Values of MSE, MAE and RMSE:
-![value](https://github.com/SHARAN-MJ/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/119560305/ec8c29bd-44af-4636-b27f-6daaff59db9e)
+## TEST SET GRAPH
+![ML8](https://github.com/Roselinjovita/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/119104296/7ad629d3-cb46-44a1-8620-4cac9a171847)
+
+## VALUES OF MSE,MAE,AND RMSE
+![ML9](https://github.com/Roselinjovita/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/119104296/fab3399b-0a15-4735-9ea8-b50a13258aff)
+
+
+
+
+
 
 
 ## Result:
